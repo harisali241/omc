@@ -21,7 +21,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <select class="form-control select2" name="color1">
-                                    <option disabled selected="selected">{{$homeText[0]->color1}}</option>
+                                    <option value="{{$homeText[0]->color1}}" disabled selected="selected">{{$homeText[0]->color1}}</option>
                                     <option value="default">default</option>
                                     <option value="primary">primary</option>
                                     <option value="success">success</option>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <select class="form-control select2" name="color2">
-                                    <option disabled selected="selected">{{$homeText[0]->color2}}</option>
+                                    <option value="{{$homeText[0]->color2}}" disabled selected="selected">{{$homeText[0]->color2}}</option>
                                     <option value="default">default</option>
                                     <option value="primary">primary</option>
                                     <option value="success">success</option>
@@ -109,7 +109,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <select class="form-control select2" name="color3">
-                                    <option disabled selected="selected">{{$homeText[0]->color3}}</option>
+                                    <option value="{{$homeText[0]->color3}}" disabled selected="selected">{{$homeText[0]->color3}}</option>
                                     <option value="default">default</option>
                                     <option value="primary">primary</option>
                                     <option value="success">success</option>
