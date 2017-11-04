@@ -20,20 +20,32 @@
                                 <input type="text" class="form-control" value="{{$homeText[0]->heading1}}" name="heading1">
                             </div>
                             <div class="col-sm-6">
-                                <select class="form-control select2" name="color1">
-                                    <option value="{{$homeText[0]->color1}}" disabled selected="selected">{{$homeText[0]->color1}}</option>
-                                    <option value="default">default</option>
-                                    <option value="primary">primary</option>
-                                    <option value="success">success</option>
-                                    <option value="info">info</option>
-                                    <option value="warning">warning</option>
-                                    <option value="danger">danger</option>
-                                    <option value="purple">purple</option>
-                                    <option value="pink">pink</option>
-                                    <option value="inverse">inverse</option>
-                                    <option value="orange">orange</option>
-                                    <option value="brown">brown</option>
-                                    <option value="teal">teal</option>
+                                <select class="form-control select2" name="color1"> 
+                                    
+                                    <option value="default"@if($homeText[0]->color1=='default') selected="selected" @endif>default</option>
+
+                                    <option value="primary" @if($homeText[0]->color1=='primary') selected="selected" @endif>primary</option>
+                                    
+                                    <option value="success" @if($homeText[0]->color1=='success') selected="selected" @endif>success</option>
+                                    
+                                    <option value="info" @if($homeText[0]->color1=='info') selected="selected" @endif>info</option>
+                                    
+                                    <option value="warning" @if($homeText[0]->color1=='warning') selected="selected" @endif>warning</option>
+                                    
+                                    <option value="danger" @if($homeText[0]->color1=='danger') selected="selected" @endif>danger</option>
+                                    
+                                    <option value="purple" @if($homeText[0]->color1=='purple') selected="selected" @endif>purple</option>
+                                    
+                                    <option value="pink" @if($homeText[0]->color1=='pink') selected="selected" @endif>pink</option>
+                                    
+                                    <option value="inverse" @if($homeText[0]->color1=='inverse') selected="selected" @endif>inverse</option>
+                                    
+                                    <option value="orange" @if($homeText[0]->color1=='orange') selected="selected" @endif>orange</option>
+                                    
+                                    <option value="brown" @if($homeText[0]->color1=='brown') selected="selected" @endif>brown</option>
+                                    
+                                    <option value="teal" @if($homeText[0]->color1=='teal') selected="selected" @endif>teal</option>
+
                                 </select>
                             </div>
                         </div>
@@ -65,19 +77,29 @@
                             </div>
                             <div class="col-sm-6">
                                 <select class="form-control select2" name="color2">
-                                    <option value="{{$homeText[0]->color2}}" disabled selected="selected">{{$homeText[0]->color2}}</option>
-                                    <option value="default">default</option>
-                                    <option value="primary">primary</option>
-                                    <option value="success">success</option>
-                                    <option value="info">info</option>
-                                    <option value="warning">warning</option>
-                                    <option value="danger">danger</option>
-                                    <option value="purple">purple</option>
-                                    <option value="pink">pink</option>
-                                    <option value="inverse">inverse</option>
-                                    <option value="orange">orange</option>
-                                    <option value="brown">brown</option>
-                                    <option value="teal">teal</option>
+                                    <option value="default"@if($homeText[0]->color2=='default') selected="selected" @endif>default</option>
+
+                                    <option value="primary" @if($homeText[0]->color2=='primary') selected="selected" @endif>primary</option>
+                                    
+                                    <option value="success" @if($homeText[0]->color2=='success') selected="selected" @endif>success</option>
+                                    
+                                    <option value="info" @if($homeText[0]->color2=='info') selected="selected" @endif>info</option>
+                                    
+                                    <option value="warning" @if($homeText[0]->color2=='warning') selected="selected" @endif>warning</option>
+                                    
+                                    <option value="danger" @if($homeText[0]->color2=='danger') selected="selected" @endif>danger</option>
+                                    
+                                    <option value="purple" @if($homeText[0]->color2=='purple') selected="selected" @endif>purple</option>
+                                    
+                                    <option value="pink" @if($homeText[0]->color2=='pink') selected="selected" @endif>pink</option>
+                                    
+                                    <option value="inverse" @if($homeText[0]->color2=='inverse') selected="selected" @endif>inverse</option>
+                                    
+                                    <option value="orange" @if($homeText[0]->color2=='orange') selected="selected" @endif>orange</option>
+                                    
+                                    <option value="brown" @if($homeText[0]->color2=='brown') selected="selected" @endif>brown</option>
+                                    
+                                    <option value="teal" @if($homeText[0]->color2=='teal') selected="selected" @endif>teal</option>
                                 </select>
                             </div>
                         </div>
@@ -109,19 +131,29 @@
                             </div>
                             <div class="col-sm-6">
                                 <select class="form-control select2" name="color3">
-                                    <option value="{{$homeText[0]->color3}}" disabled selected="selected">{{$homeText[0]->color3}}</option>
-                                    <option value="default">default</option>
-                                    <option value="primary">primary</option>
-                                    <option value="success">success</option>
-                                    <option value="info">info</option>
-                                    <option value="warning">warning</option>
-                                    <option value="danger">danger</option>
-                                    <option value="purple">purple</option>
-                                    <option value="pink">pink</option>
-                                    <option value="inverse">inverse</option>
-                                    <option value="orange">orange</option>
-                                    <option value="brown">brown</option>
-                                    <option value="teal">teal</option>
+                                    <option value="default"@if($homeText[0]->color3=='default') selected="selected" @endif>default</option>
+
+                                    <option value="primary" @if($homeText[0]->color3=='primary') selected="selected" @endif>primary</option>
+                                    
+                                    <option value="success" @if($homeText[0]->color3=='success') selected="selected" @endif>success</option>
+                                    
+                                    <option value="info" @if($homeText[0]->color3=='info') selected="selected" @endif>info</option>
+                                    
+                                    <option value="warning" @if($homeText[0]->color3=='warning') selected="selected" @endif>warning</option>
+                                    
+                                    <option value="danger" @if($homeText[0]->color3=='danger') selected="selected" @endif>danger</option>
+                                    
+                                    <option value="purple" @if($homeText[0]->color3=='purple') selected="selected" @endif>purple</option>
+                                    
+                                    <option value="pink" @if($homeText[0]->color3=='pink') selected="selected" @endif>pink</option>
+                                    
+                                    <option value="inverse" @if($homeText[0]->color3=='inverse') selected="selected" @endif>inverse</option>
+                                    
+                                    <option value="orange" @if($homeText[0]->color3=='orange') selected="selected" @endif>orange</option>
+                                    
+                                    <option value="brown" @if($homeText[0]->color3=='brown') selected="selected" @endif>brown</option>
+                                    
+                                    <option value="teal" @if($homeText[0]->color3=='teal') selected="selected" @endif>teal</option>
                                 </select>
                             </div>
                         </div>

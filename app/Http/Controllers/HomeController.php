@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\carousel;
 use App\Models\homeText;
+use App\Models\homeImage;
 
 class HomeController extends Controller
 {
@@ -75,6 +76,67 @@ class HomeController extends Controller
         $homeText->save();
 
         return redirect()->back()->with('message','Successfully changed');
+
+    }
+
+
+    public function images()
+    {
+        
+        return view('pages.home.homeImages');
+
+    }
+
+
+    public function addImage(Request $request)
+    {
+        
+        //dd($request->all());
+
+        $this->validate(request(),[
+
+            'image_name' => 'image|mimes:jpeg,png|max:4096|dimensions:minwidth=800,height=600',
+            'heading' => 'required',
+            'textarea' => 'required',
+
+        ]);
+
+        if($request->status == null)
+        {
+            $status = 0;
+
+        }else{
+
+            $status = 1;
+        }
+
+        $upload_dir = base_path() . '/public/uploads/homeImages';
+        
+         
+        $file = $request->file('image_name');
+        $filename = $file->getClientOriginalName();
+        $file->move($upload_dir, $filename);
+    
+
+        $homeImages = new homeImage ;
+
+        $homeImages->heading = $request['heading'];
+        $homeImages->textarea = $request['textarea'];
+        $homeImages->active = $status;
+        $homeImages->image_name = $filename;
+
+        $homeImages->save();
+
+        return view('pages.home.homeViewImages');
+
+        
+    }
+
+
+    public function viewImages()
+    {
+
+         return view('pages.home.homeViewImages');
 
     }
 

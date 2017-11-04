@@ -71,144 +71,144 @@
         	</div>
 
         	<div class="row port m-b-20">
-                    <div class="portfolioContainer">
-                        <div class="col-sm-6 col-md-4 natural personal">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g1.jpg') }}" class="image-popup" title="Screenshot-1">
-                                    <img src="{{ asset('uploads/g1.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                <div class="portfolioContainer">
+                    <div class="col-sm-6 col-md-4 natural personal">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g1.jpg') }}" class="image-popup" title="Screenshot-1">
+                                <img src="{{ asset('uploads/g1.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 creative personal photography">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g2.jpg') }}" class="image-popup" title="Screenshot-2">
-                                    <img src="{{ asset('uploads/g2.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 creative personal photography">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g2.jpg') }}" class="image-popup" title="Screenshot-2">
+                                <img src="{{ asset('uploads/g2.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 natural creative">
-                            <div class=" thumb">
-                                <a href="{{ asset('uploads/g3.jpg') }}" class="image-popup" title="Screenshot-3">
-                                    <img src="{{ asset('uploads/g3.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 natural creative">
+                        <div class=" thumb">
+                            <a href="{{ asset('uploads/g3.jpg') }}" class="image-popup" title="Screenshot-3">
+                                <img src="{{ asset('uploads/g3.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 personal photography">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g4.jpg') }}" class="image-popup" title="Screenshot-4">
-                                    <img src="{{ asset('uploads/g4.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 personal photography">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g4.jpg') }}" class="image-popup" title="Screenshot-4">
+                                <img src="{{ asset('uploads/g4.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 creative photography">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g5.jpg') }}" class="image-popup" title="Screenshot-5">
-                                    <img src="{{ asset('uploads/g5.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 creative photography">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g5.jpg') }}" class="image-popup" title="Screenshot-5">
+                                <img src="{{ asset('uploads/g5.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 natural photography">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g6.jpg') }}" class="image-popup" title="Screenshot-6">
-                                    <img src="{{ asset('uploads/g6.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 natural photography">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g6.jpg') }}" class="image-popup" title="Screenshot-6">
+                                <img src="{{ asset('uploads/g6.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 personal photography creative">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g7.jpg') }}" class="image-popup" title="Screenshot-7">
-                                    <img src="{{ asset('uploads/g7.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 personal photography creative">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g7.jpg') }}" class="image-popup" title="Screenshot-7">
+                                <img src="{{ asset('uploads/g7.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 creative photography natural">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g8.jpg') }}" class="image-popup" title="Screenshot-8">
-                                    <img src="{{ asset('uploads/g8.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 creative photography natural">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g8.jpg') }}" class="image-popup" title="Screenshot-8">
+                                <img src="{{ asset('uploads/g8.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-sm-6 col-md-4 hidden-sm natural personal">
-                            <div class="thumb">
-                                <a href="{{ asset('uploads/g9.jpg') }}" class="image-popup" title="Screenshot-9">
-                                    <img src="{{ asset('uploads/g9.jpg') }}" class="thumb-img" alt="work-thumbnail">
-                                </a>
-                                <div class="gal-detail">
-                                    <h4>Image</h4>
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
-                                        iste itaque voluptas corrupti ratione reprehenderit magni similique.
-                                    </p>
-                                </div>
+                    <div class="col-sm-6 col-md-4 hidden-sm natural personal">
+                        <div class="thumb">
+                            <a href="{{ asset('uploads/g9.jpg') }}" class="image-popup" title="Screenshot-9">
+                                <img src="{{ asset('uploads/g9.jpg') }}" class="thumb-img" alt="work-thumbnail">
+                            </a>
+                            <div class="gal-detail">
+                                <h4>Image</h4>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, illo,
+                                    iste itaque voluptas corrupti ratione reprehenderit magni similique.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                    </div><!-- end portfoliocontainer-->
-                </div> <!-- End row -->
+                </div><!-- end portfoliocontainer-->
+            </div> <!-- End row -->
 
 
             <br><br>

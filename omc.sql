@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2017 at 12:14 PM
+-- Generation Time: Nov 04, 2017 at 01:56 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -55,6 +55,31 @@ INSERT INTO `carousels` (`id`, `sort_order`, `carousel_image`, `carousel_label`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `home_images`
+--
+
+CREATE TABLE `home_images` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `heading` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `textarea` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `home_images`
+--
+
+INSERT INTO `home_images` (`id`, `heading`, `textarea`, `image_name`, `active`, `created_at`, `updated_at`) VALUES
+(1, 'Image', 'any text here', 'g7.jpg', 1, '2017-11-04 08:48:43', '2017-11-04 08:48:43'),
+(2, 'Image2', 'return view(\'pages.home.homeViewImages\')->with(\'m', 'g3.JPG', 1, '2017-11-04 08:51:46', '2017-11-04 08:51:46'),
+(3, 'Image3', 't return', 'g2.jpg', 0, '2017-11-04 08:53:29', '2017-11-04 08:53:29');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `home_texts`
 --
 
@@ -78,7 +103,7 @@ CREATE TABLE `home_texts` (
 --
 
 INSERT INTO `home_texts` (`id`, `heading1`, `color1`, `text1`, `heading2`, `color2`, `text2`, `heading3`, `color3`, `text3`, `created_at`, `updated_at`) VALUES
-(1, 'demo 1', 'orange', 'First', 'Demo 2', 'warning', 'second', 'Demo 3', 'inverse', 'third', NULL, '2017-11-03 06:43:32');
+(1, 'Any Heading HERE', 'inverse', 'para', 'Any Heading', 'warning', 'Any para', 'Heading', 'teal', 'any para here', NULL, '2017-11-04 02:47:37');
 
 -- --------------------------------------------------------
 
@@ -109,7 +134,8 @@ INSERT INTO `menus` (`id`, `menu_name`, `menu_slug`, `parent_menu_id`, `order`, 
 (4, 'Home', '', NULL, 0, 'mdi mdi-home-variant', NULL, 1, 0, 2, NULL, NULL),
 (5, 'Carousel', 'carousel/create', NULL, 0, 'mdi mdi-animation', 'carousel.create', 1, 0, 1, NULL, NULL),
 (6, 'Heading and text', 'home/text', 4, 1, NULL, 'home.text', 1, 0, 3, NULL, NULL),
-(7, 'Images', 'home/images', 4, 2, NULL, 'home.images', 1, 0, 4, NULL, NULL);
+(7, 'Add Images', 'home/images', 4, 2, NULL, 'home.images', 1, 0, 4, NULL, NULL),
+(8, 'view Images', 'home/viewImages', 4, 3, NULL, 'home.viewImages', 1, 0, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -132,7 +158,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2017_11_01_170713_create_menus_table', 2),
 (4, '2017_11_01_183645_create_carousels_table', 3),
-(5, '2017_11_03_081557_create_home_texts_table', 4);
+(5, '2017_11_03_081557_create_home_texts_table', 4),
+(6, '2017_11_04_131758_create_home_images_table', 5);
 
 -- --------------------------------------------------------
 
@@ -167,7 +194,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'harisali241@gmail.com', '$2y$10$smXR2zdSkCJS0hYrrrx0beTlBNf.m9/syER7ODI6.zKwzjVXxmrLO', 'hjZidoZb9wFiTitRNFMFPlEXin36IheQBCNJCP8RxnNzXWATOrDzNGMbsPxW', '2017-11-01 14:25:36', '2017-11-01 14:25:36');
+(1, 'admin', 'harisali241@gmail.com', '$2y$10$smXR2zdSkCJS0hYrrrx0beTlBNf.m9/syER7ODI6.zKwzjVXxmrLO', '7kHP14uszVcNWlP0zlk83aJoHyK3kujM7QiN2HBfTfIO2iPXnD3OhrvB1Bq2', '2017-11-01 14:25:36', '2017-11-01 14:25:36');
 
 --
 -- Indexes for dumped tables
@@ -177,6 +204,12 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `remember_token`, `c
 -- Indexes for table `carousels`
 --
 ALTER TABLE `carousels`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `home_images`
+--
+ALTER TABLE `home_images`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -221,6 +254,11 @@ ALTER TABLE `users`
 ALTER TABLE `carousels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
+-- AUTO_INCREMENT for table `home_images`
+--
+ALTER TABLE `home_images`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `home_texts`
 --
 ALTER TABLE `home_texts`
@@ -229,12 +267,12 @@ ALTER TABLE `home_texts`
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `users`
 --

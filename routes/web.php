@@ -29,5 +29,8 @@ Route::middleware(['auth'])->group(function(){
 	Route::resource('carousel','carouselController'); //For Carousel
 	Route::get('/home/text' , 'HomeController@text');
 	Route::post('/home/text-store' , 'HomeController@store');
+	Route::get('/home/images' , 'HomeController@images');
+	Route::post('/home/image_create' , 'HomeController@addImage');
+	Route::get('/home/viewImages' , 'HomeController@viewImages');
 
 });
