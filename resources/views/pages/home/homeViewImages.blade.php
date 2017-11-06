@@ -45,17 +45,17 @@
                     	</div>
                     </div>
                     <div class="form-group row">
-                    	<div class="col-xs-2">
+                    	<div class="col-md-4 col-sm-2 col-xs-4">
                         	<button type="submit" class="btn btn-primary waves-effect waves-light">Update</button>  
                         </div>
                     </form>
-                        <div class="col-xs-2">
+                        <div class="col-md-4 col-sm-2 col-xs-4">
                         	<form action="{{url('/home/image_delete_'.$homeImage->id)}}" method="POST">
     							{{csrf_field()}}
                         	<button type="submit" class="btn btn-danger waves-effect waves-light">Delete</button>
                         	</form>
                         </div>
-                        <div class="col-xs-9">
+                        <div class="col-md-4 col-sm-8 col-xs-4">
 	                        
 	                    </div>
                     </div>

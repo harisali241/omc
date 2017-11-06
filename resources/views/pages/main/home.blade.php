@@ -1,7 +1,6 @@
 
 @extends('layouts.mainHome')
 @section('content')
-	<br><br><br><br>
 	        
             @include('includes.carousel')
 
