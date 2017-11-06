@@ -63,7 +63,7 @@ class CarouselController extends Controller
         if($request->carousel_image !== null){
          
             $file = $request->file('carousel_image');
-            $filename = $file->getClientOriginalName();
+            $filename = mt_rand(1000, 5000).$file->getClientOriginalName();
             $file->move($upload_dir, $filename);
             File::delete($upload_dir .'/'. $old_name);
     

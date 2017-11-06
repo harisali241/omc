@@ -12,28 +12,7 @@
 		<div class="col-md-4"></div>
         <div class="col-md-4">
             <!-- START carousel-->
-            <div id="carousel-example-captions" data-ride="carousel" class="carousel slide">
-                <ol class="carousel-indicators">
-                    @foreach($carousel as $caro)
-                    <li data-target="#carousel-example-captions" data-slide-to="{{$caro->sort_order}}" class="@if($caro->sort_order == 1) active @endif"></li>
-                    @endforeach
-                </ol>
-                <div role="listbox" class="carousel-inner">
-                    @foreach($carousel as $caro)
-                    <div class="item @if($caro->sort_order == 1) active @endif">
-                        <img src="{{asset('uploads/carousel/'.$caro->carousel_image)}}" style="width:100%!important;" alt="First slide image">
-                        <div class="carousel-caption">
-                            <h3 class="text-white font-600">{{$caro->carousel_label}}</h3>
-                            <p>
-                                {{$caro->carousel_text}}
-                            </p>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                <a href="#carousel-example-captions" role="button" data-slide="prev" class="left carousel-control"> <span aria-hidden="true" class="fa fa-angle-left"></span> <span class="sr-only">Previous</span> </a>
-                <a href="#carousel-example-captions" role="button" data-slide="next" class="right carousel-control"> <span aria-hidden="true" class="fa fa-angle-right"></span> <span class="sr-only">Next</span> </a>
-            </div>
+            @include('includes.carousel')
             <!-- END carousel-->
         </div>  
         <div class="col-md-4"></div>         
@@ -90,14 +69,14 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Label</label>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control" value="" name="carousel_label" placeholder="{{$caro->carousel_label}}">
+                                            <input type="text" class="form-control" value="{{$caro->carousel_label}}" name="carousel_label" placeholder="">
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Text area</label>
                                         <div class="col-md-10">
-                                            <textarea id="textarea" class="form-control" maxlength="50" rows="3" placeholder="{{$caro->carousel_text}}" name="carousel_text" ></textarea>
+                                            <textarea id="textarea" class="form-control" maxlength="50" rows="3" placeholder="" name="carousel_text" >{{$caro->carousel_text}}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -115,6 +94,7 @@
                                             <div class="col-md-10">
                                             <p class="text-success font-17 m-t-5" style="cursor:pointer;">
                                                 Always active
+                                                <input type="hidden" name="status" value="1" />
                                             </p>
                                             </div>
                                         </div>

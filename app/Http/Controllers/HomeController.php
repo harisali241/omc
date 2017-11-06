@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\carousel;
 use App\Models\homeText;
 use App\Models\homeImage;
+use File;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
     {
         $carousel = carousel::where('active' , 1)->OrderBy('sort_order', 'asc')->get();
         $homeText = homeText::all();
-        return view('pages.main.home',compact('carousel','homeText'));
+        $homeImages = homeImage::where('active', 1)->OrderBy('id' , 'asc')->get();
+        return view('pages.main.home',compact('carousel','homeText','homeImages'));
     }
 
 
@@ -95,7 +97,7 @@ class HomeController extends Controller
 
         $this->validate(request(),[
 
-            'image_name' => 'image|mimes:jpeg,png|max:4096|dimensions:minwidth=800,height=600',
+            'image_name' => 'required|image|mimes:jpeg,png|max:5000|dimensions:min_width=800,max_width=2272,min_height=600,max_height=1704',
             'heading' => 'required',
             'textarea' => 'required',
 
@@ -114,7 +116,7 @@ class HomeController extends Controller
         
          
         $file = $request->file('image_name');
-        $filename = $file->getClientOriginalName();
+        $filename = mt_rand(1000,5000).$file->getClientOriginalName();
         $file->move($upload_dir, $filename);
     
 
@@ -127,7 +129,7 @@ class HomeController extends Controller
 
         $homeImages->save();
 
-        return view('pages.home.homeViewImages');
+        return redirect('home/viewImages')->with('message','Image Successfully Added');
 
         
     }
@@ -136,8 +138,74 @@ class HomeController extends Controller
     public function viewImages()
     {
 
-         return view('pages.home.homeViewImages');
+        $homeImages = homeImage::all();
+        return view('pages.home.homeViewImages' , compact('homeImages'));
 
     }
+
+
+    public function updateImages(Request $request ,$id)
+    {
+
+        //dd($request->all());
+
+        $this->validate(request(),[
+
+            'image_name' => 'image|mimes:jpeg,png|max:5000|dimensions:min_width=800,max_width=2272,min_height=600,max_height=1704',
+            'heading' => 'required',
+            'textarea' => 'required',
+
+        ]);
+
+        if($request->status == null)
+        {
+            $status = 0;
+
+        }else{
+
+            $status = 1;
+        }
+
+        $old_name = homeImage::where('id' , $id)->pluck('image_name')[0];
+
+        $upload_dir = base_path() . '/public/uploads/homeImages';
+        
+        if($request->image_name !== null){
+
+            $file = $request->file('image_name');
+            $filename = mt_rand(1000,5000).$file->getClientOriginalName();
+            $file->move($upload_dir, $filename);
+            File::delete($upload_dir .'/'. $old_name);
+    
+        }else{
+
+            $filename = homeImage::where('id' , $id)->pluck('image_name')[0];
+                     
+        }
+
+        $homeImages = homeImage::findOrFail($id) ;
+
+        $homeImages->heading = $request['heading'];
+        $homeImages->textarea = $request['textarea'];
+        $homeImages->active = $status;
+        $homeImages->image_name = $filename;
+
+        $homeImages->save();
+
+
+        return redirect()->back()->with('message','Image Successfully Updated');
+
+    }
+
+
+    public function deleteImages($id)
+    {
+
+        homeImage::where('id', $id)->delete();
+
+        return redirect()->back()->with('message','Image Successfully Delete');
+
+    }
+
 
 }

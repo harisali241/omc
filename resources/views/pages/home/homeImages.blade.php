@@ -1,4 +1,4 @@
-@extends('layouts.customHome')
+@extends('layouts.customHome')  
 @section('customContent')
 
 <div class="card-box">
@@ -15,7 +15,7 @@
                 <div class="col-md-10">
                 	<input type="file" class="filestyle" data-placeholder="No File" name="image_name">
                     <p class="text-muted font-13">
-                        Only allow image dimensions (with=1600,hight=800), format (jpeg, png), max.size(2mpx).
+                        Only allow image dimensions (min_width=800,min_hight=600)-(max_width=2272,max_hight=1704), format (jpeg, png), max.size(4MP).
                     </p>
                 </div>
             </div>
@@ -28,7 +28,7 @@
 			<div class="form-group">
                 <label class="col-md-2 control-label">Text Area</label>
                 <div class="col-md-10">
-                    <textarea id="textarea" class="form-control" maxlength="50" rows="3" name="textarea" ></textarea>
+                    <textarea id="textarea" class="form-control" maxlength="500" rows="3" name="textarea" ></textarea>
                 </div>
             </div>
             <div class="form-group">

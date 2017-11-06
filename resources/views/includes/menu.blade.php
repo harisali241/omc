@@ -5,20 +5,20 @@
             <ul class="navigation-menu">
 
                 <li class="has-submenu">
-                    <a href="#"><i class="mdi mdi-view-dashboard"></i>Home</a>
-                    <ul class="submenu">
+                    <a href="{{ url('/') }}"><i class="mdi mdi-view-dashboard"></i>Home</a>
+                    <!-- <ul class="submenu">
                         <li>
                             <a href="#">link</a>
                         </li>
                         <li>
                             <a href="#">link</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li class="has-submenu">
-                    <a href="#"><i class="mdi mdi-layers"></i>About us</a>
-                    <ul class="submenu megamenu">
+                    <a href="{{ url('/aboutus') }}"><i class="mdi mdi-layers"></i>About us</a>
+                    <!-- <ul class="submenu megamenu">
                         <li>
                             <ul>
                                 <li>
@@ -63,12 +63,12 @@
                                 <li><a href="#">link</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li class="has-submenu">
                     <a href="#"><i class="mdi mdi-diamond"></i>Invury Form</a>
-                    <ul class="submenu">
+                    <!-- <ul class="submenu">
                         <li class="has-submenu">
                             <a href="#">links</a>
                             <ul class="submenu">
@@ -135,12 +135,12 @@
                                 <li><a href="#">link</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li class="has-submenu">
                     <a href="#"><i class="mdi mdi-google-pages"></i>Products</a>
-                    <ul class="submenu megamenu">
+                    <!-- <ul class="submenu megamenu">
                         <li>
                             <ul>
                                 <li><a href="#">link</a></li>
@@ -159,12 +159,12 @@
                                 <li><a href="#">link</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li class="has-submenu">
                     <a href="#"><i class="mdi mdi-book-multiple"></i>Our Clients</a>
-                    <ul class="submenu megamenu">
+                    <!-- <ul class="submenu megamenu">
                         <li>
                             <ul>
                                 <li><a href="#">link</a></li>
@@ -187,18 +187,18 @@
                                 <li><a href="#">link</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li class="has-submenu">
                     <a href="#"><i class="mdi mdi-comment-text"></i>Contact us</a>
-                    <ul class="submenu">
+                    <!-- <ul class="submenu">
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
                         <li><a href="{{ url('/logout') }}">logout</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li class="has-submenu">

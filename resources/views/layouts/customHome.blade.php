@@ -20,8 +20,15 @@
         <link href="{{ asset('assets/plugins/bootstrap-select/css/bootstrap-select.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css') }}" rel="stylesheet" />
 
+        <!-- Tooltipster css -->
+        <link rel="stylesheet" href="{{ asset('assets/plugins/tooltipster/tooltipster.bundle.min.css') }}">
+
          <!-- Summernote css -->
         <link href="{{ asset('assets/plugins/summernote/summernote.css') }}" rel="stylesheet" />
+
+        <!-- Jquery filer css -->
+        <link href="{{ asset('assets/plugins/jquery.filer/css/jquery.filer.css') }}" rel="stylesheet" />
+        <link href="{{ asset('assets/plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css') }}" rel="stylesheet" />
 
 
         <link href="{{ asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
@@ -107,6 +114,10 @@
         <script src="{{ asset('c_assets/js/jquery.slimscroll.js') }}"></script>
         <script src="{{ asset('c_assets/js/jquery.scrollTo.min.js') }}"></script>
         <script src="{{ asset('assets/plugins/switchery/switchery.min.js') }}"></script>
+
+        <!-- Tooltipster js -->
+        <script src="{{ asset('assets/plugins/tooltipster/tooltipster.bundle.min.js') }}"></script>
+        <script src="{{ asset('c_assets/pages/jquery.tooltipster.js') }}"></script>
 
 
         @yield('customScripts')
