@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class homeImage extends Model
+class category extends Model
 {
     protected $fillable = [
-        'product_id', 'active'
+        'category_name'
     ];
 }

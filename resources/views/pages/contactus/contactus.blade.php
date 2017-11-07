@@ -4,14 +4,14 @@
 
 	<br><br>
 
-	<h3>{{ $about->heading }}</h3>
+	<h3>{{ $contact->heading }}</h3>
 	<hr>
 	<br>
 	
 
 	<div class="row">
 
-		{!! $about->area !!}
+		{!! $contact->area !!}
 
 	</div>
 

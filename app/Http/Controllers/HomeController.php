@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\carousel;
 use App\Models\homeText;
 use App\Models\homeImage;
+use App\Models\product;
 use File;
 
 class HomeController extends Controller
@@ -29,8 +30,8 @@ class HomeController extends Controller
     {
         $carousel = carousel::where('active' , 1)->OrderBy('sort_order', 'asc')->get();
         $homeText = homeText::all();
-        $homeImages = homeImage::where('active', 1)->OrderBy('id' , 'asc')->get();
-        return view('pages.main.home',compact('carousel','homeText','homeImages'));
+        $products = product::where('home_status', 1)->get();
+        return view('pages.main.home' , compact('carousel','homeText','products'));
     }
 
 
@@ -82,26 +83,10 @@ class HomeController extends Controller
     }
 
 
-    public function images()
-    {
-        
-        return view('pages.home.homeImages');
-
-    }
-
-
-    public function addImage(Request $request)
+    public function imageStatus(Request $request, $id)
     {
         
         //dd($request->all());
-
-        $this->validate(request(),[
-
-            'image_name' => 'required|image|mimes:jpeg,png|max:5000|dimensions:min_width=800,max_width=2272,min_height=600,max_height=1704',
-            'heading' => 'required',
-            'textarea' => 'required',
-
-        ]);
 
         if($request->status == null)
         {
@@ -112,34 +97,68 @@ class HomeController extends Controller
             $status = 1;
         }
 
-        $upload_dir = base_path() . '/public/uploads/homeImages';
+
+        $products = product::findOrFail($id);
+
+        $products->home_status = $status;
+        $products->save();
+ 
+
+        return redirect()->back()->with('message', 'Successfully changed');
+
+    }
+
+
+    // public function addImage(Request $request)
+    // {
+        
+    //     //dd($request->all());
+
+    //     $this->validate(request(),[
+
+    //         'image_name' => 'required|image|mimes:jpeg,png|max:5000|dimensions:min_width=800,max_width=2272,min_height=600,max_height=1704',
+    //         'heading' => 'required',
+    //         'textarea' => 'required',
+
+    //     ]);
+
+    //     if($request->status == null)
+    //     {
+    //         $status = 0;
+
+    //     }else{
+
+    //         $status = 1;
+    //     }
+
+    //     $upload_dir = base_path() . '/public/uploads/homeImages';
         
          
-        $file = $request->file('image_name');
-        $filename = mt_rand(1000,5000).$file->getClientOriginalName();
-        $file->move($upload_dir, $filename);
+    //     $file = $request->file('image_name');
+    //     $filename = mt_rand(1000,5000).$file->getClientOriginalName();
+    //     $file->move($upload_dir, $filename);
     
 
-        $homeImages = new homeImage ;
+    //     $homeImages = new homeImage ;
 
-        $homeImages->heading = $request['heading'];
-        $homeImages->textarea = $request['textarea'];
-        $homeImages->active = $status;
-        $homeImages->image_name = $filename;
+    //     $homeImages->heading = $request['heading'];
+    //     $homeImages->textarea = $request['textarea'];
+    //     $homeImages->active = $status;
+    //     $homeImages->image_name = $filename;
 
-        $homeImages->save();
+    //     $homeImages->save();
 
-        return redirect('home/viewImages')->with('message','Image Successfully Added');
+    //     return redirect('home/viewImages')->with('message','Image Successfully Added');
 
         
-    }
+    // }
 
 
     public function viewImages()
     {
 
-        $homeImages = homeImage::all();
-        return view('pages.home.homeViewImages' , compact('homeImages'));
+        $products = product::all();        
+        return view('pages.home.homeViewImages', compact('products'));
 
     }
 

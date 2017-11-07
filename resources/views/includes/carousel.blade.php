@@ -1,16 +1,19 @@
+<br><br><br><br>
 <div class="row">
     <div class="col-md-12">
         <!-- START carousel-->
 <div id="carousel-example-captions" data-ride="carousel" class="carousel slide">
     <ol class="carousel-indicators">
+            @php $i=0; @endphp
         @foreach($carousel as $caro)
-        <li data-target="#carousel-example-captions" data-slide-to="{{$caro->sort_order}}" class="@if($caro->sort_order == 1) active @endif"></li>
+        <li data-target="#carousel-example-captions" data-slide-to="{!!$i!!}" class="@if($caro->sort_order == 1) active @endif"></li>
+            @php $i++; @endphp
         @endforeach
     </ol>
-    <div role="listbox" class="carousel-inner">
+    <div role="listbox" class="carousel-inner" >
         @foreach($carousel as $caro)
         <div class="item @if($caro->sort_order == 1) active @endif">
-            <img src="{{asset('uploads/carousel/'.$caro->carousel_image)}}" style="width:100%!important;" alt="First slide image">
+            <img src="{{asset('uploads/carousel/'.$caro->carousel_image)}}" style="width:100% !important;" alt="First slide image">
             <div class="carousel-caption">
                 <h3 class="text-white font-600">{{$caro->carousel_label}}</h3>
                 <p>

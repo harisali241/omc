@@ -1,10 +1,6 @@
 
 @extends('layouts.mainHome')
 @section('content')
-	<br><br><br><br>
-	        
-            @include('includes.carousel')
-
 
 			<br><br>
 
@@ -44,21 +40,27 @@
                 </div>
             </div>
         	</div>
+            <br>
+
+            <h3>Our Products</h3>
+            <hr>
+
+            <div class="card-box">
 
         	<div class="row port m-b-20">
                 <div class="portfolioContainer">
                         @php $i=1; @endphp
-                    @foreach($homeImages as $homeImage)
+                    @foreach($products as $product)
 
                         <div class="col-sm-6 col-md-4 natural personal">
                             <div class="thumb">
-                                <a href="{{ asset('uploads/homeImages/'.$homeImage->image_name) }}" class="image-popup" title="Screenshot-{!!$i!!}">
-                                    <img src="{{ asset('uploads/homeImages/'.$homeImage->image_name) }}" class="thumb-img" alt="work-thumbnail">
+                                <a href="{{ asset('uploads/product/'.$product->product_image) }}" class="image-popup" title="Screenshot-{!!$i!!}">
+                                    <img src="{{ asset('uploads/product/'.$product->product_image) }}" class="thumb-img" alt="work-thumbnail">
                                 </a>
                                 <div class="gal-detail">
-                                    <h4>{{$homeImage->heading}}</h4>
+                                    <h4>{{$product->product_name}}</h4>
                                     <p class="text-muted">
-                                        {{$homeImage->textarea}}
+                                        {{$product->product_detail}}
                                     </p>
                                 </div>
                             </div>
@@ -69,6 +71,6 @@
                 </div><!-- end portfoliocontainer-->
             </div> <!-- End row -->
 
-
+            </div>
             <br><br>
 @endsection

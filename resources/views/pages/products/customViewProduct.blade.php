@@ -2,30 +2,43 @@
 @section('customContent')
 
 <div class="card-box">
-	<h3>Images</h3>
+	<h3>Products</h3>
 	<hr>
 
-
-    <div class="row">
+	<div class="row">
 
         @foreach($products as $product)
-        <form action="{{ url('/home/image_status_'.$product->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('product/'.$product->id) }}" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
+            {{ method_field('PUT') }}
+            {{ method_field('PATCH') }}
         <div class="col-md-4">
             <div class="thumbnail">
                 <img src="{{asset('uploads/product/'.$product->product_image)}}" class="img-responsive">
                 <div class="caption">
-                    <div class="gal-detail">
-                        <h4>{{$product->product_name}}</h4>
-                        <p class="text-muted">
-                            {{$product->product_detail}}
-                        </p>
+                    <div class="form-group row">
+                        <div class="col-xs-12">
+                            <p class="text-muted font-13">
+                                Only allow image dimensions (min_width=800,min_hight=600)-(max_width=2272,max_hight=1704), format (jpeg, png), max.size(4MP).
+                            </p>
+                            <input type="file" class="filestyle" data-placeholder="{{$product->product_image}}" name="product_image" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" value="{{$product->product_name}}" name="product_name" data-toggle="tooltip" data-placement="top" title="" data-original-title="Product Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <textarea id="textarea" class="form-control" maxlength="1000" rows="5" style="overflow:auto;resize:none" name="product_detail" data-toggle="tooltip" data-placement="top" title="" data-original-title="Description">{{$product->product_detail}}</textarea>
+                        </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-xs-12">
                         <table width="130px">
                             <tr>
-                                <td style="padding-left:15px;"><label class="control-label">Active</label></td>
+                                <td><label class="control-label">Active</label></td>
                                 <td><input type="checkbox" id="switch{{$product->id}}" switch="bool" name="status" />
                                 <label for="switch{{$product->id}}" data-on-label="Yes" data-off-label="No"></label></td>
                             </tr>
@@ -33,10 +46,17 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="" style="padding-left:25px;float:left;">
-                            <button type="submit" class="btn btn-default waves-effect waves-light">Done</button>  
+                        <div class="" style="padding-left:10px;float:left;">
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Update</button>  
                         </div>
-                    
+                    </form>
+                        <div class="" style="padding-left:10px;float:left;">
+                            <form action="{{url('product/'.$product->id)}}" method="POST">
+                                {{csrf_field()}}
+                                {{ method_field('DELETE') }}
+                            <button type="submit" class="btn btn-danger waves-effect waves-light">Delete</button>
+                            </form>
+                        </div>
                         <div class="col-md-4 col-sm-8 col-xs-4">
                             
                         </div>
@@ -44,7 +64,6 @@
                 </div>
             </div>
         </div>
-        </form>
         @endforeach
         
     </div>
@@ -77,7 +96,7 @@
 
             @foreach($products as $product)
 
-                if( {{$product->home_status}} == 1) {
+                if( {{$product->active}} == 1) {
                     $("#switch{{$product->id}}").prop("checked","checked");
                 }else{
                     $("#switch{{$product->id}}").removeAttr("checked");

@@ -17,7 +17,7 @@
                 </li>
 
                 <li class="has-submenu">
-                    <a href="{{ url('/aboutus') }}"><i class="mdi mdi-layers"></i>About us</a>
+                    <a href="{{ url('/aboutUs') }}"><i class="mdi mdi-layers"></i>About us</a>
                     <!-- <ul class="submenu megamenu">
                         <li>
                             <ul>
@@ -67,7 +67,7 @@
                 </li>
 
                 <li class="has-submenu">
-                    <a href="#"><i class="mdi mdi-diamond"></i>Invury Form</a>
+                    <a href="{{url('/enquiryForm')}}"><i class="mdi mdi-diamond"></i>Enquiry Form</a>
                     <!-- <ul class="submenu">
                         <li class="has-submenu">
                             <a href="#">links</a>
@@ -139,7 +139,7 @@
                 </li>
 
                 <li class="has-submenu">
-                    <a href="#"><i class="mdi mdi-google-pages"></i>Products</a>
+                    <a href="{{url('/products')}}"><i class="mdi mdi-google-pages"></i>Products</a>
                     <!-- <ul class="submenu megamenu">
                         <li>
                             <ul>
@@ -163,7 +163,7 @@
                 </li>
 
                 <li class="has-submenu">
-                    <a href="#"><i class="mdi mdi-book-multiple"></i>Our Clients</a>
+                    <a href="{{url('/ourClients')}}"><i class="mdi mdi-book-multiple"></i>Our Clients</a>
                     <!-- <ul class="submenu megamenu">
                         <li>
                             <ul>
@@ -191,7 +191,7 @@
                 </li>
 
                 <li class="has-submenu">
-                    <a href="#"><i class="mdi mdi-comment-text"></i>Contact us</a>
+                    <a href="{{ url('/contactUs') }}"><i class="mdi mdi-comment-text"></i>Contact us</a>
                     <!-- <ul class="submenu">
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
